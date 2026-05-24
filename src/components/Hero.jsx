@@ -9,9 +9,6 @@ const Hero = () => {
     const workSection = document.getElementById('work');
     if (workSection) {
       workSection.scrollIntoView({ behavior: 'smooth' });
-      console.log('Scrolling to work section'); // Debug log
-    } else {
-      console.log('Work section not found'); // Debug log
     }
   };
 
@@ -24,7 +21,6 @@ const Hero = () => {
           backgroundImage: 'url("https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&h=1080&fit=crop")',
         }}
       >
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
