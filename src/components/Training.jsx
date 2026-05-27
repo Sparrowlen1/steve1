@@ -7,15 +7,6 @@ const Training = () => {
 
   const trainings = [
     {
-      title: "The #1 Video On ALL of Youtube",
-      description: "for Facebook ads strategy",
-      icon: Youtube,
-      iconColor: "text-red-500",
-      type: "Video",
-      action: "watch",
-      link: "https://youtube.com/watch?v=your-video-id" 
-    },
-    {
       title: "Understand our creative strategy",
       description: "on a macro level",
       icon: TrendingUp,

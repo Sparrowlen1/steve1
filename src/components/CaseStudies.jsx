@@ -5,19 +5,19 @@ const CaseStudies = () => {
     {
       number: "#1",
       story: "We started like normal testing TONS of static volume, to be honest we could not find a winner. We took the semi decent learnings from our static testing & their historical learnings document & made a round of ugc.... first round.. we got this.",
-      result: "KES 14M+ Spend on one ad",
-      metrics: ["KES 700K reduction in cost per acquisition", "#1 ad in the ad account in 60 days"]
+      result: "$100,000+ Spend on one ad",
+      metrics: ["$5,000 reduction in cost per acquisition", "#1 ad in the ad account in 60 days"]
     },
     {
       number: "#2",
-      story: "We came into a brand & noticed they had a much higher ROAS(return on AD spend) with male customers but none of their ads were speaking to men & the male demo was pulling very little adspend. So we made ads for men.",
+      story: "We came into a brand & noticed they had a much higher ROAS (return on ad spend) with male customers but none of their ads were speaking to men & the male demo was pulling very little adspend. So we made ads for men.",
       result: "25% ROAS increase, 35% Spend increase",
       metrics: ["25% Higher ROAS", "35% Revenue increase"]
     },
     {
       number: "#3",
-      story: "In 2023 we were young, fresh into the game, and a boutique agency working with very few clients. We onboarded a European brand & handled everything (ads, email, sms, sourcing, LP's, etc.) and made it our own. we onboarded them at KES 3.9M/mo, and 6 months later we hit KES 130M/mo.",
-      result: "KES 3.9M/mo to KES 130M/mo in 6 months.",
+      story: "In 2023 we were young, fresh into the game, and a boutique agency working with very few clients. We onboarded a European brand & handled everything (ads, email, sms, sourcing, LP's, etc.) and made it our own. We onboarded them at $30,000/mo, and 6 months later we hit $1,000,000/mo.",
+      result: "$30,000/mo to $1,000,000/mo in 6 months",
       metrics: ["3,233% Revenue Growth", "6 Month Timeline"]
     }
   ];
