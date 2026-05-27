@@ -41,12 +41,11 @@ const Navbar = () => {
         }`}>
           <div className="px-3 sm:px-6 py-2 sm:py-3">
             <div className="flex items-center justify-between">
-              {/* Logo - Left */}
+              
               <Link to="/" className="text-sm sm:text-xl md:text-2xl font-bold tracking-tighter bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent">
                 VIREON ADs
               </Link>
 
-              {/* Desktop Navigation - Center */}
               <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
                 {navLinks.map((link) => (
                   <button
@@ -58,8 +57,7 @@ const Navbar = () => {
                   </button>
                 ))}
               </div>
-
-              {/* Book Button - Right */}
+              
               <div className="hidden md:block">
                 <button
                   onClick={() => navigate('/booking')}
@@ -103,7 +101,7 @@ const Navbar = () => {
           </div>
         </nav>
       </div>
-      {/* Spacer */}
+      
       <div className="h-14 sm:h-16 md:h-20"></div>
     </>
   );

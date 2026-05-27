@@ -26,7 +26,6 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 tracking-tighter">
@@ -44,7 +43,7 @@ const Hero = () => {
               onClick={() => navigate('/booking')} 
               className="bg-gradient-to-r from-amber-500 to-yellow-500 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:from-amber-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
             >
-              Book a Consultation →
+              Book a Consultation 
             </button>
             <button 
               onClick={scrollToWork}
@@ -54,10 +53,10 @@ const Hero = () => {
             </button>
           </div>
           <div className="mt-10 sm:mt-16 flex flex-wrap justify-center gap-4 sm:gap-8 text-xs sm:text-sm text-gray-400">
-            <div className="flex items-center gap-1 sm:gap-2">✓ 100+ Creatives/Month</div>
-            <div className="flex items-center gap-1 sm:gap-2">✓ Performance-Based</div>
-            <div className="flex items-center gap-1 sm:gap-2">✓ Former Brand Operators</div>
-            <div className="flex items-center gap-1 sm:gap-2">✓ No Long-Term Contracts</div>
+            <div className="flex items-center gap-1 sm:gap-2"> 100+ Creatives/Month</div>
+            <div className="flex items-center gap-1 sm:gap-2"> Performance-Based</div>
+            <div className="flex items-center gap-1 sm:gap-2"> Former Brand Operators</div>
+            <div className="flex items-center gap-1 sm:gap-2"> No Long-Term Contracts</div>
           </div>
         </div>
       </div>

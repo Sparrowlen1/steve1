@@ -45,7 +45,6 @@ const Process = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {steps.map((step, index) => (
               <div key={index} className="bg-black/50 rounded-xl sm:rounded-2xl border border-white/10 hover:border-amber-500/50 transition-all duration-300 overflow-hidden reveal">
-                {/* Video Player Directly in Container */}
                 <div 
                   onClick={() => setActiveVideo(step)}
                   className="relative aspect-video bg-gradient-to-br from-gray-800 to-gray-900 cursor-pointer group overflow-hidden"
@@ -63,7 +62,6 @@ const Process = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 </div>
                 
-                {/* Content */}
                 <div className="p-4 sm:p-5 md:p-6">
                   <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-amber-500/20 mb-2 sm:mb-3">{step.number}</div>
                   <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">{step.title}</h3>
@@ -75,7 +73,6 @@ const Process = () => {
         </div>
       </section>
 
-      {/* Video Modal */}
       {activeVideo && (
         <div 
           className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/95 backdrop-blur-lg animate-fade-in"
