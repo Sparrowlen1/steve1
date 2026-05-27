@@ -99,7 +99,7 @@ const BookingPage = () => {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full bg-black border border-gray-700 rounded-lg px-3 sm:px-4 py-2 sm:py-3 focus:border-amber-500 focus:outline-none text-white text-sm sm:text-base"
-                  placeholder="John Doe"
+                  placeholder="Sparrowlen"
                 />
               </div>
               <div>
@@ -111,7 +111,7 @@ const BookingPage = () => {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full bg-black border border-gray-700 rounded-lg px-3 sm:px-4 py-2 sm:py-3 focus:border-amber-500 focus:outline-none text-white text-sm sm:text-base"
-                  placeholder="john@example.com"
+                  placeholder="Sparrowlen@example.com"
                 />
               </div>
             </div>
@@ -150,10 +150,10 @@ const BookingPage = () => {
                 className="w-full bg-black border border-gray-700 rounded-lg px-3 sm:px-4 py-2 sm:py-3 focus:border-amber-500 focus:outline-none text-white text-sm sm:text-base"
               >
                 <option value="">Select your monthly ad spend range</option>
-                <option value="KES 0 - KES 6.5M">KES 0 - KES 6.5M</option>
-                <option value="KES 6.5M - KES 13M">KES 6.5M - KES 13M</option>
-                <option value="KES 13M - KES 32.5M">KES 13M - KES 32.5M</option>
-                <option value="KES 32.5M+">KES 32.5M+</option>
+                <option value="KES 0 - KES 6.5M">KES 5000 - KES 10000</option>
+                <option value="KES 6.5M - KES 13M">KES 11000 - KES 16000</option>
+                <option value="KES 13M - KES 32.5M">KES 17000 - KES 32500</option>
+                <option value="KES 32.5M+">KES 32500+</option>
               </select>
             </div>
 
