@@ -15,19 +15,19 @@ const Founder = () => {
                   I've spent 10+ years in the trenches of DTC. Started Dropshipping at 13, Then worked in house at a large brand, then transitioned into a fractional CMO for a few brands… I spent my time sourcing products (in person trips to china), building brands (handling EVERY marketing channel… Tiktok, Meta, Email, content creation, media buying)
                 </p>
                 <p>
-                  I built CRTVDON because I learned what I'm best at. I spent my late teens & early twenties as a generalist in dtc ecom. Now I am a SPECIALIST in direct response marketing through meta. Over the last few years we've narrowed our scope & began working with 8 & 9 figure brands specifically on ad creative.
+                  I built VIREON ADs because I learned what I'm best at. I spent my late teens & early twenties as a generalist in dtc ecom. Now I am a SPECIALIST in direct response marketing through meta. Over the last few years we've narrowed our scope & began working with 8 & 9 figure brands specifically on ad creative.
                 </p>
               </div>
               <div className="mt-8 pt-6 border-t border-white/10">
-                <p className="font-bold text-2xl">Jared Robinson</p>
-                <p className="text-gray-500">Founder at Don Global Solutions</p>
+                <p className="font-bold text-2xl">Stephen Mugendi</p>
+                <p className="text-gray-500">Founder at VIREON ADs</p>
               </div>
             </div>
             <div className="order-1 md:order-2 reveal">
               <div className="aspect-square bg-gradient-to-br from-amber-500/20 to-yellow-600/20 rounded-2xl flex items-center justify-center border border-amber-500/30 overflow-hidden">
                 <img 
-                  src="/images/founder.png"
-                  alt="Jared Robinson - Founder"
+                  src="/images/founder.jpeg"
+                  alt="Stephen Mugendi - Founder"
                   className="w-full h-full object-cover"
                 />
               </div>

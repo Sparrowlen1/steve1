@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent mb-4">
-              SPARROWLEN
+              VIREON ADs
             </h3>
             <p className="text-gray-400 text-sm">
               Scaling DTC brands with high-volume creative & data-driven decisions.
@@ -35,7 +35,7 @@ const Footer = () => {
                   href="mailto:Sparrowlen13@gmail.com" 
                   className="hover:text-amber-500 transition-colors"
                 >
-                  Sparrowlen13@gmail.com
+                  vireonads757@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3 group">
@@ -44,7 +44,7 @@ const Footer = () => {
                   href="tel:0740063099" 
                   className="hover:text-amber-500 transition-colors"
                 >
-                  0740063099
+                  0113241011
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -58,15 +58,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-gray-500">
               <li className="flex items-center gap-3 group">
                 <Linkedin className="w-4 h-4 text-amber-500 group-hover:scale-110 transition-transform" />
-                <a href="#" className="hover:text-amber-500 transition-colors">LinkedIn</a>
-              </li>
-              <li className="flex items-center gap-3 group">
-                <Twitter className="w-4 h-4 text-amber-500 group-hover:scale-110 transition-transform" />
-                <a href="#" className="hover:text-amber-500 transition-colors">Twitter</a>
-              </li>
-              <li className="flex items-center gap-3 group">
-                <Instagram className="w-4 h-4 text-amber-500 group-hover:scale-110 transition-transform" />
-                <a href="#" className="hover:text-amber-500 transition-colors">Instagram</a>
+                <a href="https://www.linkedin.com/in/stephen-njue-455727406/" className="hover:text-amber-500 transition-colors"target='_blank'>LinkedIn</a>
               </li>
             </ul>
           </div>

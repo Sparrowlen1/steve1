@@ -22,7 +22,7 @@ const WhyUs = () => {
       <div className="container-custom">
         <div className="text-center mb-16 reveal">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tighter">
-            Why CRTVDON Over Everyone Else?
+            Why VIREON ADs Over Everyone Else?
           </h2>
         </div>
 
@@ -40,7 +40,7 @@ const WhyUs = () => {
           </div>
 
           <div className="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-8 reveal">
-            <h3 className="text-2xl font-bold mb-6 text-amber-400">CRTVDON:</h3>
+            <h3 className="text-2xl font-bold mb-6 text-amber-400">VIREON ADs:</h3>
             <ul className="space-y-3">
               {crtvdon.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">

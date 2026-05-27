@@ -4,19 +4,19 @@ const CaseStudies = () => {
   const caseStudies = [
     {
       number: "#1",
-      story: "We started like normal testing TONS of static volume... to be honest.. we COULD NOT find a winner. We took the SEMI decent learnings from our static testing & their historical learnings document & made a round of ugc.... first round.. we got THIS.",
-      result: "KES 14M+ Spend on ONE ad",
+      story: "We started like normal testing TONS of static volume, to be honest we could not find a winner. We took the semi decent learnings from our static testing & their historical learnings document & made a round of ugc.... first round.. we got this.",
+      result: "KES 14M+ Spend on one ad",
       metrics: ["KES 700K reduction in cost per acquisition", "#1 ad in the ad account in 60 days"]
     },
     {
       number: "#2",
-      story: "We came into a brand & noticed they had a much higher ROAS with male customers... but NONE of their ads were speaking to men & the male demo was pulling VERY little adspend. So we made ads for men.",
+      story: "We came into a brand & noticed they had a much higher ROAS(return on AD spend) with male customers but none of their ads were speaking to men & the male demo was pulling very little adspend. So we made ads for men.",
       result: "25% ROAS increase, 35% Spend increase",
       metrics: ["25% Higher ROAS", "35% Revenue increase"]
     },
     {
       number: "#3",
-      story: "In 2023 we were young, fresh into the game, and a boutique agency working with VERY few clients. We onboarded a European brand & handled EVERYTHING (ads, email, sms, sourcing, LP's, etc.) and made it our own. we onboarded them at KES 3.9M/mo, and 6 months later we hit KES 130M/mo.",
+      story: "In 2023 we were young, fresh into the game, and a boutique agency working with very few clients. We onboarded a European brand & handled everything (ads, email, sms, sourcing, LP's, etc.) and made it our own. we onboarded them at KES 3.9M/mo, and 6 months later we hit KES 130M/mo.",
       result: "KES 3.9M/mo to KES 130M/mo in 6 months.",
       metrics: ["3,233% Revenue Growth", "6 Month Timeline"]
     }
@@ -31,7 +31,7 @@ const CaseStudies = () => {
             <span className="bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent">speak for themselves.</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto reveal">
-            We've built creative engines for DTC brands across CPG, apparel, and supplements — and the numbers don't lie.
+            We've built creative engines for DTC brands across CPG, apparel, and supplements and the numbers don't lie.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ const CaseStudies = () => {
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-3 text-gray-300">After CRTVDON:</h4>
+                  <h4 className="text-lg font-semibold mb-3 text-gray-300">After VIREON ADs:</h4>
                   <ul className="space-y-3">
                     {study.metrics.map((metric, i) => (
                       <li key={i} className="text-gray-400 flex items-center gap-2">

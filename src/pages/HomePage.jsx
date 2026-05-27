@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import WhatWeBuild from '../components/WhatWeBuild';
 import Process from '../components/Process';
-import Testimonials from '../components/Testimonials';
 import CaseStudies from '../components/CaseStudies';
 import WhatYouGet from '../components/WhatYouGet';
 import WhyUs from '../components/WhyUs';
@@ -38,7 +37,6 @@ const HomePage = () => {
         <Hero />
         <WhatWeBuild />
         <Process />
-        <Testimonials />
         <CaseStudies />
         <WhatYouGet />
         <WhyUs />

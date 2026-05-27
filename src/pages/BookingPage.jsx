@@ -25,8 +25,7 @@ const BookingPage = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      // Replace this URL with your Formspree endpoint!
-      const response = await fetch('https://formspree.io/f/xykvdeej', {
+      const response = await fetch('https://formspree.io/f/mjgzpngo', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

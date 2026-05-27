@@ -1,58 +1,81 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const WhatWeBuild = () => {
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
   const items = [
     {
-      title: "Video Ads",
-      desc: "High-converting VSLs",
-      image: "https://images.unsplash.com/photo-1536240474400-3d7f2b7b2b2f?w=400&h=300&fit=crop",
-      alt: "Video ad creative"
+      title: "Afnan 9PM",
+      desc: "Sweet. Bold. Attention-grabbing",
+      image: "/images/perfume/I13.jpg",
+      fallback: "https://via.placeholder.com/320x320?text=Afnan+9PM",
+      alt: "Afnan 9PM Perfume"
     },
     {
-      title: "Static Ads", 
-      desc: "Result-based creatives",
-      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=300&fit=crop",
-      alt: "Static ad design"
+      title: "9PM + Bvlgari",
+      desc: "Darker. Warmer. More intense",
+      image: "/images/perfume/I12.jpg",
+      fallback: "https://via.placeholder.com/320x320?text=Bvlgari+Man+In+Black",
+      alt: "Bvlgari Man In Black Layering"
     },
     {
-      title: "Carousels",
-      desc: "Story-driven formats",
-      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=300&fit=crop",
-      alt: "Carousel ads"
+      title: "9PM + Montblanc",
+      desc: "Woodier. More mature",
+      image: "/images/perfume/I11.jpg",
+      fallback: "https://via.placeholder.com/320x320?text=Montblanc+Explorer",
+      alt: "Montblanc Explorer Layering"
     },
     {
-      title: "UGC Content",
-      desc: "Authentic testimonials",
-      image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=300&fit=crop",
-      alt: "User generated content"
+      title: "9PM + Bleu de Chanel",
+      desc: "Cleaner. Smoother. More polished",
+      image: "/images/perfume/I10.jpg",
+      fallback: "https://via.placeholder.com/320x320?text=Bleu+de+Chanel",
+      alt: "Bleu de Chanel Layering"
     },
     {
-      title: "Founder Led",
-      desc: "Brand storytelling",
-      image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=300&fit=crop",
-      alt: "Founder content"
+      title: "Signature Shape",
+      desc: "Same fragrance, different personality",
+      image: "/images/perfume/I9.jpg",
+      fallback: "https://via.placeholder.com/320x320?text=Signature+Shape",
+      alt: "Fragrance Collection"
     },
     {
-      title: "Proof Ads",
-      desc: "Social proof cards",
-      image: "https://images.unsplash.com/photo-1553729459-9e2e6b8b5c7f?w=400&h=300&fit=crop",
-      alt: "Proof advertisements"
+      title: "Jean Paul Gaultier",
+      desc: "Divine Eau de Parfum",
+      image: "/images/perfume/I6.jpg",
+      fallback: "https://via.placeholder.com/320x320?text=Jean+Paul+Gaultier",
+      alt: "Jean Paul Gaultier Divine"
     },
     {
-      title: "AI Videos",
-      desc: "Cutting-edge AI",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop",
-      alt: "AI generated videos"
+      title: "Montale Starry Nights",
+      desc: "Luxury Night Fragrance",
+      image: "/images/perfume/I5.jpg",
+      fallback: "https://via.placeholder.com/320x320?text=Montale+Starry+Nights",
+      alt: "Montale Starry Nights"
     },
     {
-      title: "Podcast Ads",
-      desc: "Street interviews",
-      image: "https://images.unsplash.com/photo-1590602847861-f3572b1d6d8f?w=400&h=300&fit=crop",
-      alt: "Podcast advertisements"
+      title: "Mind Games",
+      desc: "J'Adoube Pomegranate Suede",
+      image: "/images/perfume/I2.jpg",
+      fallback: "https://via.placeholder.com/320x320?text=Mind+Games",
+      alt: "Mind Games J'Adoube"
+    },
+    {
+      title: "The Masked Perfumer",
+      desc: "Spray | Slay | Stay Mysterious",
+      image: "/images/perfume/I14.jpg",
+      fallback: "https://via.placeholder.com/320x320?text=The+Masked+Perfumer",
+      alt: "The Masked Perfumer Collection"
+    },
+    {
+      title: "Luna Perfumes",
+      desc: "Premium Fragrance Collection",
+      image: "/images/perfume/I7.jpg",
+      fallback: "https://via.placeholder.com/320x320?text=Luna+Perfumes",
+      alt: "Luna Perfumes Collection"
     }
   ];
 
-  // Duplicate items for infinite scroll effect
   const allItems = [...items, ...items, ...items];
 
   return (
@@ -62,7 +85,7 @@ const WhatWeBuild = () => {
           What we'll <span className="bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent">build</span> for you.
         </h2>
         <p className="text-gray-400 mt-4 reveal">
-          A look into some image ads & video ads we've made for 7, 8, & 9 figure brands...
+          A look into some image ads & video ads we've made for premium fragrance brands...
         </p>
       </div>
 
@@ -73,13 +96,17 @@ const WhatWeBuild = () => {
               key={idx}
               className="w-[320px] flex-shrink-0 group cursor-pointer"
             >
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 hover:border-amber-500/50 transition-all duration-300 transform hover:scale-105">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 hover:border-amber-500/50 transition-all duration-300 transform hover:scale-105 bg-gradient-to-br from-gray-900 to-gray-800">
                 <img 
-                  src={item.image} 
+                  src={item.image}
                   alt={item.alt}
-                  className="w-full h-[240px] object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-[320px] object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  onError={(e) => {
+                    e.target.src = item.fallback;
+                  }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <p className="text-white font-semibold text-lg">{item.title}</p>
                   <p className="text-gray-300 text-sm">{item.desc}</p>
@@ -90,7 +117,7 @@ const WhatWeBuild = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .slider-track {
           display: flex;
           animation: scroll 40s linear infinite;

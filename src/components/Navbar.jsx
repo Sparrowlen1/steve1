@@ -43,7 +43,7 @@ const Navbar = () => {
             <div className="flex items-center justify-between">
               {/* Logo - Left */}
               <Link to="/" className="text-xl md:text-2xl font-bold tracking-tighter bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent">
-                CRTVDON
+                VIREON ADs
               </Link>
 
               {/* Desktop Navigation - Center */}

@@ -13,7 +13,7 @@ const Training = () => {
       iconColor: "text-red-500",
       type: "Video",
       action: "watch",
-      link: "https://youtube.com/watch?v=your-video-id" // Optional external link
+      link: "https://youtube.com/watch?v=your-video-id" 
     },
     {
       title: "Understand our creative strategy",
