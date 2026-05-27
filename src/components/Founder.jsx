@@ -12,7 +12,7 @@ const Founder = () => {
               </h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
-                  I've spent 10+ years in the trenches of DTC. Started Dropshipping at 13, Then worked in house at a large brand, then transitioned into a fractional CMO for a few brands… I spent my time sourcing products (in person trips to china), building brands (handling EVERY marketing channel… Tiktok, Meta, Email, content creation, media buying)
+                  I've spent 3+ years in the trenches of DTC. Started Dropshipping at 13, Then worked in house at a large brand, then transitioned into a fractional CMO for a few brands… I spent my time sourcing products (in person trips to china), building brands (handling EVERY marketing channel… Tiktok, Meta, Email, content creation, media buying)
                 </p>
                 <p>
                   I built VIREON ADs because I learned what I'm best at. I spent my late teens & early twenties as a generalist in dtc ecom. Now I am a SPECIALIST in direct response marketing through meta. Over the last few years we've narrowed our scope & began working with 8 & 9 figure brands specifically on ad creative.

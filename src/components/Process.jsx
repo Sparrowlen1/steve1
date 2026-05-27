@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { Play, X } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
+import { Play, X, Volume2, VolumeX } from 'lucide-react';
 
 const Process = () => {
   const [activeVideo, setActiveVideo] = useState(null);
+  const videoRefs = useRef({});
 
   const steps = [
     {
@@ -28,6 +29,34 @@ const Process = () => {
     }
   ];
 
+  // Auto-play videos when they come into view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          const video = videoRefs.current[entry.target.dataset.index];
+          if (video) {
+            if (entry.isIntersecting) {
+              video.play().catch(e => console.log('Autoplay prevented:', e));
+            } else {
+              video.pause();
+            }
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    Object.keys(videoRefs.current).forEach(key => {
+      const video = videoRefs.current[key];
+      if (video) {
+        observer.observe(video);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <section id="process" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white/5 border-t border-white/10">
@@ -45,23 +74,42 @@ const Process = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {steps.map((step, index) => (
               <div key={index} className="bg-black/50 rounded-xl sm:rounded-2xl border border-white/10 hover:border-amber-500/50 transition-all duration-300 overflow-hidden reveal">
+                {/* Video Container - Always playing muted */}
                 <div 
-                  onClick={() => setActiveVideo(step)}
                   className="relative aspect-video bg-gradient-to-br from-gray-800 to-gray-900 cursor-pointer group overflow-hidden"
                 >
-                  <video 
+                  <video
+                    ref={el => videoRefs.current[index] = el}
+                    data-index={index}
                     src={step.videoUrl}
                     className="w-full h-full object-cover"
-                    preload="metadata"
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
                   />
-                  <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                  
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                  
+                  {/* Play/Pause Overlay */}
+                  <div 
+                    onClick={() => setActiveVideo(step)}
+                    className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center cursor-pointer"
+                  >
                     <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-amber-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-2xl">
                       <Play className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-black ml-0.5 sm:ml-1" fill="currentColor" />
                     </div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  
+                  {/* Muted Indicator */}
+                  <div className="absolute bottom-2 right-2 bg-black/60 backdrop-blur-sm rounded-full px-2 py-1 text-xs text-gray-300 flex items-center gap-1 pointer-events-none">
+                    <VolumeX size={12} />
+                    <span>Muted</span>
+                  </div>
                 </div>
                 
+                {/* Content */}
                 <div className="p-4 sm:p-5 md:p-6">
                   <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-amber-500/20 mb-2 sm:mb-3">{step.number}</div>
                   <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">{step.title}</h3>
@@ -73,6 +121,7 @@ const Process = () => {
         </div>
       </section>
 
+      {/* Modal for full video with sound */}
       {activeVideo && (
         <div 
           className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/95 backdrop-blur-lg animate-fade-in"
@@ -93,6 +142,7 @@ const Process = () => {
                 className="w-full h-full"
                 controls
                 autoPlay
+                playsInline
               />
             </div>
             
