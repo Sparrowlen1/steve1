@@ -30,23 +30,25 @@ const Process = () => {
 
   return (
     <>
-      <section id="process" className="py-24 bg-white/5 border-t border-white/10">
+      <section id="process" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white/5 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 reveal">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter mb-3 sm:mb-4 reveal">
               Our simple 3 step process to{' '}
-              <span className="bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent">CONSISTENTLY scale</span>
+              <span className="bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent block sm:inline">
+                CONSISTENTLY scale
+              </span>
             </h2>
-            <p className="text-xl text-gray-400 reveal">your spend with a stable CAC.</p>
+            <p className="text-base sm:text-lg md:text-xl text-gray-400 reveal">your spend with a stable CAC.</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {steps.map((step, index) => (
-              <div key={index} className="bg-black/50 rounded-2xl border border-white/10 hover:border-amber-500/50 transition-all duration-300 overflow-hidden reveal">
+              <div key={index} className="bg-black/50 rounded-xl sm:rounded-2xl border border-white/10 hover:border-amber-500/50 transition-all duration-300 overflow-hidden reveal">
                 {/* Video Player Directly in Container */}
                 <div 
                   onClick={() => setActiveVideo(step)}
-                  className="relative aspect-video bg-gradient-to-br from-gray-800 to-gray-900 cursor-pointer group"
+                  className="relative aspect-video bg-gradient-to-br from-gray-800 to-gray-900 cursor-pointer group overflow-hidden"
                 >
                   <video 
                     src={step.videoUrl}
@@ -54,18 +56,18 @@ const Process = () => {
                     preload="metadata"
                   />
                   <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-                    <div className="w-14 h-14 bg-amber-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-2xl">
-                      <Play className="w-7 h-7 text-black ml-1" fill="currentColor" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-amber-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-2xl">
+                      <Play className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-black ml-0.5 sm:ml-1" fill="currentColor" />
                     </div>
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 </div>
                 
                 {/* Content */}
-                <div className="p-6">
-                  <div className="text-5xl font-bold text-amber-500/20 mb-3">{step.number}</div>
-                  <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-                  <p className="text-gray-400 leading-relaxed text-sm">{step.description}</p>
+                <div className="p-4 sm:p-5 md:p-6">
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-amber-500/20 mb-2 sm:mb-3">{step.number}</div>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">{step.title}</h3>
+                  <p className="text-gray-400 leading-relaxed text-xs sm:text-sm">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -76,19 +78,19 @@ const Process = () => {
       {/* Video Modal */}
       {activeVideo && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-lg animate-fade-in"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/95 backdrop-blur-lg animate-fade-in"
           onClick={() => setActiveVideo(null)}
         >
           <div className="relative w-full max-w-5xl" onClick={(e) => e.stopPropagation()}>
             <button 
               onClick={() => setActiveVideo(null)}
-              className="absolute -top-14 right-0 text-white hover:text-amber-500 transition-colors duration-300 flex items-center gap-2"
+              className="absolute -top-10 sm:-top-14 right-0 text-white hover:text-amber-500 transition-colors duration-300 flex items-center gap-1 sm:gap-2"
             >
-              <X size={28} />
-              <span className="text-sm">Close</span>
+              <X size={20} className="sm:w-7 sm:h-7" />
+              <span className="text-xs sm:text-sm">Close</span>
             </button>
             
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/20 bg-black">
+            <div className="aspect-video rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-white/20 bg-black">
               <video
                 src={activeVideo.videoUrl}
                 className="w-full h-full"
@@ -97,9 +99,9 @@ const Process = () => {
               />
             </div>
             
-            <div className="mt-6 text-center">
-              <p className="text-white font-bold text-xl">{activeVideo.title}</p>
-              <p className="text-gray-400 mt-2">
+            <div className="mt-4 sm:mt-6 text-center px-2">
+              <p className="text-white font-bold text-base sm:text-xl">{activeVideo.title}</p>
+              <p className="text-gray-400 mt-1 sm:mt-2 text-xs sm:text-sm">
                 {activeVideo.description.substring(0, 100)}...
               </p>
             </div>

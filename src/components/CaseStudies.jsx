@@ -23,37 +23,37 @@ const CaseStudies = () => {
   ];
 
   return (
-    <section id="results" className="py-24 bg-white/5 border-t border-white/10">
+    <section id="results" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white/5 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 reveal">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter mb-3 sm:mb-4 reveal">
             The results{' '}
             <span className="bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent">speak for themselves.</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto reveal">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto px-2 reveal">
             We've built creative engines for DTC brands across CPG, apparel, and supplements and the numbers don't lie.
           </p>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-6 sm:space-y-8 md:space-y-12">
           {caseStudies.map((study, index) => (
-            <div key={index} className="bg-black/50 rounded-2xl border border-white/10 p-8 hover:border-amber-500/50 transition-all duration-300 reveal">
-              <h3 className="text-3xl font-bold text-amber-500/20 mb-6">Case Study {study.number}</h3>
-              <div className="grid md:grid-cols-2 gap-8">
+            <div key={index} className="bg-black/50 rounded-xl sm:rounded-2xl border border-white/10 p-4 sm:p-6 md:p-8 hover:border-amber-500/50 transition-all duration-300 reveal">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-amber-500/20 mb-4 sm:mb-6">Case Study {study.number}</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 <div>
-                  <h4 className="text-lg font-semibold mb-3 text-gray-300">The Story:</h4>
-                  <p className="text-gray-400 leading-relaxed mb-6">{study.story}</p>
-                  <h4 className="text-lg font-semibold mb-3 text-gray-300">The Result:</h4>
-                  <p className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent">
+                  <h4 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-gray-300">The Story:</h4>
+                  <p className="text-gray-400 leading-relaxed text-sm sm:text-base mb-4 sm:mb-6">{study.story}</p>
+                  <h4 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-gray-300">The Result:</h4>
+                  <p className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent">
                     {study.result}
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-3 text-gray-300">After VIREON ADs:</h4>
-                  <ul className="space-y-3">
+                  <h4 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-gray-300">After VIREON ADs:</h4>
+                  <ul className="space-y-2 sm:space-y-3">
                     {study.metrics.map((metric, i) => (
-                      <li key={i} className="text-gray-400 flex items-center gap-2">
-                        <span className="text-amber-500">✓</span> {metric}
+                      <li key={i} className="text-gray-400 flex items-start gap-2 text-sm sm:text-base">
+                        <span className="text-amber-500 mt-0.5">✓</span> {metric}
                       </li>
                     ))}
                   </ul>

@@ -79,37 +79,37 @@ const WhatWeBuild = () => {
   const allItems = [...items, ...items, ...items];
 
   return (
-    <section id="work" className="py-20 overflow-hidden border-t border-white/10">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tighter reveal">
+    <section id="work" className="py-12 sm:py-16 md:py-20 overflow-hidden border-t border-white/10">
+      <div className="text-center mb-8 sm:mb-12 px-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter reveal">
           What we'll <span className="bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent">build</span> for you.
         </h2>
-        <p className="text-gray-400 mt-4 reveal">
+        <p className="text-gray-400 mt-3 sm:mt-4 text-sm sm:text-base px-2 reveal">
           A look into some image ads & video ads we've made for premium fragrance brands...
         </p>
       </div>
 
       <div className="relative overflow-hidden">
-        <div className="slider-track flex gap-6">
+        <div className="slider-track flex gap-3 sm:gap-4 md:gap-6">
           {allItems.map((item, idx) => (
             <div
               key={idx}
-              className="w-[320px] flex-shrink-0 group cursor-pointer"
+              className="w-[200px] sm:w-[260px] md:w-[300px] lg:w-[320px] flex-shrink-0 group cursor-pointer"
             >
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 hover:border-amber-500/50 transition-all duration-300 transform hover:scale-105 bg-gradient-to-br from-gray-900 to-gray-800">
+              <div className="relative overflow-hidden rounded-xl sm:rounded-2xl border border-white/10 hover:border-amber-500/50 transition-all duration-300 transform hover:scale-105 bg-gradient-to-br from-gray-900 to-gray-800">
                 <img 
                   src={item.image}
                   alt={item.alt}
-                  className="w-full h-[320px] object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-[200px] sm:h-[260px] md:h-[300px] lg:h-[320px] object-cover group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
                   onError={(e) => {
                     e.target.src = item.fallback;
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <p className="text-white font-semibold text-lg">{item.title}</p>
-                  <p className="text-gray-300 text-sm">{item.desc}</p>
+                <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3 md:p-4">
+                  <p className="text-white font-semibold text-sm sm:text-base md:text-lg">{item.title}</p>
+                  <p className="text-gray-300 text-xs sm:text-sm">{item.desc}</p>
                 </div>
               </div>
             </div>
@@ -131,6 +131,12 @@ const WhatWeBuild = () => {
         @keyframes scroll {
           0% { transform: translateX(0); }
           100% { transform: translateX(-33.33%); }
+        }
+
+        @media (max-width: 640px) {
+          .slider-track {
+            animation: scroll 25s linear infinite;
+          }
         }
       `}</style>
     </section>
